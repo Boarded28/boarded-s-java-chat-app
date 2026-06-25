@@ -2,15 +2,17 @@ package client.gui;
 
 import java.awt.geom.RoundRectangle2D;
 
+import com.formdev.flatlaf.FlatLightLaf;
+
 public class Window extends javax.swing.JFrame {
 
-    public Window() {
+    public Window() {        
         setFrame();
     }    
 
     private void setFrame() {
+        FlatLightLaf.setup();
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.setResizable(false);
         this.setUndecorated(true);
     }
 
