@@ -14,7 +14,7 @@ import net.miginfocom.swing.MigLayout;
 class HeaderDecorator extends JPanel {
 
     public HeaderDecorator() {
-        this.setLayout(new MigLayout("", "[grow][pref]10[pref]", ""));       
+        this.setLayout(new MigLayout("", "[grow][]10[]", ""));
         this.setOpaque(false);
         this.addMouseMotionListener(new MouseMotionAdapter() {
             private Point clickPoint;
@@ -46,6 +46,10 @@ class HeaderDecorator extends JPanel {
             window.setState(Frame.ICONIFIED);
         });
 
+        var appTitle = new JLabel("Boarded's Chat App v1.0");
+        appTitle.setForeground(Color.WHITE);
+
+        this.add(appTitle, "cell 0 0, al left");
         this.add(closeButton, "cell 2 0, al right, w 20!, h 20!");
         this.add(minimizeButton, "cell 1 0, al right, w 20!, h 20!");
     }    

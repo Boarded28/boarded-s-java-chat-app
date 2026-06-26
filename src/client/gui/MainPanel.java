@@ -13,11 +13,16 @@ public class MainPanel extends JPanel {
     public MainPanel() {        
         setup();
         this.add(new HeaderDecorator(), "dock north, h 35!");
+        this.add(new LoginScreen());
     }
 
     private void setup() {
         this.setLayout(new MigLayout("fill"));
         this.setBackground(new Color(0.087f, 0.097f, 0.175f));
+    }
+
+    public void setCurrentPanel() {
+        
     }
 
     @Override

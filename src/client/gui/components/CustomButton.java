@@ -22,16 +22,12 @@ public class CustomButton extends JButton {
 
     private void init() {
         this.setFocusable(false);
-        this.setContentAreaFilled(true);
-        this.setOpaque(true);
-        this.setFocusPainted(false);
-        this.setBorderPainted(false);
         setShape(50, 50, 999, "#ffffff", "#000000");
     }
 
     public void setShape(int w, int h, int arc, String bg, String fg) {
         String style = String.format(
-            "arc:%d; minimumWidth:%d; minimumHeight:%d; background:%s; foreground:%s; focusWidth:0;",
+            "arc:%d; minimumWidth:%d; minimumHeight:%d; background:%s; foreground:%s; focusWidth:0; borderWidth:0;",
         arc, w, h, bg, fg);
         this.putClientProperty("FlatLaf.style", style);
         this.setPreferredSize(new java.awt.Dimension(w,h));
